@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>feedback_success</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            background-image: url(static/images/restarant.jpg);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+    
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            margin-top: 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            
+        }
+    
+        h2 {
+            color: #4CAF50;
+        }
+    
+        p {
+            color: #333;
+        }
+    
+        a {
+            color: #007BFF;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            text-decoration: underline;
+        }
+    
+        /* Center the content */
+        .center-content {
+            text-align: center;
+        }
+    
+        /* Style for the form button */
+        .form-button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            outline: none;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+    
+        /* Style for the form button on hover */
+        .form-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        {% block content %}
+        <center>
+            <h2>Feedback Submitted Successfully!</h2>
+        </center>
+        <center>
+            <p>Thank you for providing your feedback. We appreciate it!</p>
+        </center>
+        <center>
+            <!-- Form with a button to go back to the home page -->
+            <form action="/Home" method="get">
+                <button type="submit" class="form-button">Go to Home Page</button>
+            </form>
+        </center>
+        <!-- You can display feedback details here if needed -->
+        {% endblock %}
+    </div>
+
+</body>
+
+</html>
